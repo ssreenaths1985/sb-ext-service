@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        html {font-size: 16px;font-family: Arial, Helvetica, sans-serif;line-height: 22px;}
+        h3 {font-size: 20px;font-weight: 600;line-height: 1.3;}
+        h4 {font-size: 18px;font-weight: 600;line-height: 1.3;}
+        p {font-size: 16px;margin:0;line-height: 22px;}
+
+        .tableMainDiv {
+            width: 95%;
+            margin: 0 auto;
+        }
+        tr.tableHeadRow {
+            border:0px !important;
+            border-top:1px solid #d5d5d5 !important;
+            border-bottom:1px solid #d5d5d5 !important;
+        }
+        tr.tableHeadRow th {
+            background-color: #f5f5f5;
+            cursor: pointer;
+            text-align: left;
+            padding: 15px 15px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+            border-right: 1px solid #d5d5d5 !important;
+            border-top: 0px !important;
+            border-bottom: 0px !important;
+        }
+        tr.tableHeadRow th:last-child {
+            border-right: none;
+        }
+
+        /* .table-activity {
+            width: 70%;
+            margin-right: 3em;
+            padding: 0;
+        } */
+
+        .activityname {
+            width: 52%;
+            padding: 0 4em 0 0;
+        }
+
+        .span {
+            background: #FDECDE !important;
+            margin: 2px 2px 8px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 1px 8px;
+            border-radius: 4px;
+            word-break: break-word;
+            display: block
+        }
+
+        .submittd {
+            width: 24% !important;
+            padding: 0.3em 0.6em;
+        }
+
+        .td {
+            border-bottom: 1px solid black !important
+        }
+
+        .activityname {
+            width: 52%;
+            padding: 0 4em 0 0;
+        }
+
+        .activityspan {
+            background: #FDECDE !important;
+            margin: 2px 2px 8px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 1px 8px;
+            border-radius: 4px;
+            word-break: break-word;
+            display: block
+        }
+
+        .allocation-table {
+
+            width: 100%;
+        }
+
+        .th {
+            background-color: #f5f5f5;
+            cursor: pointer;
+            text-align: left;
+            padding: 6px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: normal;
+            height: 31px;
+        }
+
+        /* .table-role {
+            width: 22%;
+            margin-right: 1em;
+            padding: 0 !important;
+        } */
+
+        .userNameDiv {
+            padding: 15px 15px;
+            text-align: left;
+            margin-top: 5%;
+            border: 1px solid #d5d5d5;
+            border-bottom: 0px !important;
+        }
+        h4.userName {
+            padding: 0;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+            margin:0;
+        }
+        p.userDesg {
+            font-size: 16px;
+        }
+        th:nth-child(1) {
+            width: 28.9% !important;
+        }
+
+        th:nth-child(2) {
+            width: 37.06% !important;
+        }
+
+        th:nth-child(3) {
+            width: 17.1%;
+        }
+
+        th:nth-child(4) {
+            /* width: 18% */
+        }
+
+        td:nth-child(1) {
+            width: 15%
+        }
+
+        td:nth-child(2) {
+            width: 37%
+        }
+
+        td:nth-child(3) {
+            width: 15%
+        }
+
+        td:nth-child(4) {
+            width: 18%
+        }
+        .custom-table-ul li {
+            border-bottom: 1px solid #d5d5d5 !important;
+            padding: 0px !important;
+            margin: 0px !important;
+        }
+        .custom-table-ul li:last-child {
+            border-bottom: 0 !important;
+        }
+
+        .table-role {
+            width: 22%;
+            padding: 15px 15px;
+            vertical-align: top;
+            /* border-bottom:2px solid #ddd; */
+            /* margin-right: 1em;
+            padding-left: 20px !important; */
+        }
+
+        .table-role b {
+            margin-left: 2px;
+        }
+
+        /* .table-role span {
+            padding: 15px 35px;
+            word-break: break-word;
+            display: inline-block;
+        } */
+
+        /* .table-activity {
+            width: 70%;
+            margin-right: 3em;
+            padding: 0;
+        } */
+
+        .table-activity .activityname {
+            width: 52%;
+            /* padding: 1.5em 1em 1.5em 1em; */
+            padding:15px 15px;
+            vertical-align: top;
+        }
+
+        td.submittd {
+            width: 24% !important;
+            padding:15px 15px;
+            vertical-align: top;
+            /* padding: 0.3em 0.6em; */
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0 !important;
+            margin: 0 !important;
+        }
+
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        td {
+            text-align: left;
+            padding: 0px;
+        }
+
+        /* .outer-table {
+
+        } */
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse !important;
+            width: 100%;
+        }
+        tr.tableContentRow {
+            border-bottom: 1px solid #d5d5d5 !important;
+        }
+        tr.tableContentRow:last-child {
+            border-bottom: 0px !important;
+        }
+        .roleBox {
+            padding-left:30px;
+            padding-top: 15px;
+        }
+        #stripParent{ width:100%;}
+
+        /* #stripParent div{ display:inline-block; width:33.3%;} */
+        #stripfirstDiv{ display:inline-block; text-align:left;width: 60% !important; padding: 15px 15px;}
+        #stripfirstDiv h3 {margin:0}
+        #stripfirstDiv p {margin-top:10px; margin-bottom:0}
+        #stripsecondDiv{ display:inline-block; text-align:right;width: 18% !important; padding: 15px 15px;vertical-align: top;}
+        #stripsecondDiv span {position: relative;vertical-align: -webkit-baseline-middle;}
+        #stripthirdDiv { display:inline-block; width: 10% !important;padding: 4px 15px;vertical-align: top;}
+        #stripthirdDiv span { vertical-align: -webkit-baseline-middle;position: relative;}
+        #stripthirdDiv img {
+            border: 1px solid #d5d5d5 !important;
+            width: 75px;
+            height: 75px;
+            display: block;
+            font-size: 10px;
+        }
+
+        .strip-content {width: 96%; margin: 0 auto;}
+
+        table.mainTable {
+            border:1px solid #d5d5d5 !important;
+        }
+        table.customInnerTable tr {
+            border-bottom: 1px solid #d5d5d5 !important;
+        }
+        table.customInnerTable tr:last-child {
+            border-bottom: 0px !important;
+        }
+        /* table.customInnerTable tr:last-child {
+            border-bottom: 0;
+        } */
+        table.customInnerTable tr td {
+            border:1px solid #d5d5d5 !important;
+            border-top: 0px !important;
+            border-bottom: 0px !important;
+        }
+        table.customInnerTable tr td:last-child {
+            border-right: 0px !important;
+        }
+        thead {
+                            display: table-row-group !important;
+                        }
+                        tr {
+                            page-break-before: always !important;
+                            page-break-after: always !important;
+                            page-break-inside: avoid !important;
+                        }
+                        table {
+                            word-wrap: break-word !important;
+                        }
+                        table td {
+                            word-break: break-word !important;
+                        }
+    </style>
+</head>
+
+<body style="text-align: center">
+        <div id="stripParent" style="border-style: dashed hidden;text-align: left;border-width: 2px;background-color: #f5f5f5;">
+            <div class="strip-content">
+            <div id="stripfirstDiv">
+            <h3>$name </h3>
+            <p>Published at $printedTime</p>
+            </div>
+            <div id="stripsecondDiv">
+                <span>Scan this QR code for the latest version</span>
+            </div>
+            <div id="stripthirdDiv">
+                <span><img src=$qrcodeurl alt="QR code"></span>
+            </div>
+        </div>
+        </div>
+        <div class="tableMainDiv">
+            #foreach( $user in $users )
+            <table class="allocation-table">
+                <tr>
+                    <div class="userNameDiv">
+                        <h4 class="userName">$foreach.count . $user.userName</h4>
+                        <p class="userDesg">$user.userPosition</p>
+                    </div>
+                    <table id="custom-table" class="mainTable">
+                        <tr class="tableHeadRow">
+                            <th>Roles</th>
+                            <th>Activities</th>
+                            <th>Submit to</th>
+                            <th>Submission from</th>
+                        </tr>
+                        <tr class="tableContentRow">
+                            <td colspan="4">
+                                <ul class="custom-table-ul">
+                                    #foreach($rc in $user.roleCompetencyList)
+                                    <li>
+                                        <table id="custom-table">
+                                            <tr>
+                                                <td class="table-role">
+                                                    <b>$rc.roleDetails.name</b>
+                                                </td>
+                                                <td class="table-activity">
+                                                    <table id="custom-table" class="customInnerTable">
+                                                        #foreach($a in $rc.roleDetails.childNodes)
+                                                        <tr>
+                                                            <td class="activityname">
+                                                                <span>$a.description</span>
+                                                            </td>
+                                                            <td class="submittd">
+                                                                #if($a.submittedToName)
+                                                                  $a.submittedToName
+                                                                #end
+                                                            </td>
+                                                            <td class="submittd">
+                                                                #if($a.submittedFromName)
+                                                                 $a.submittedFromName
+                                                                #end
+                                                            </td>
+                                                        </tr>
+                                                        #end
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    #end
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </tr>
+            </table>
+            #if($foreach.hasNext)
+            #else
+            <div style="padding: 3% 0% 1% 0%;">
+                <p>------------------------------------------------------ End of document ------------------------------------------------------</p>
+            </div>
+            #end
+            #end
+        </div>
+
+</body>
+</html>
